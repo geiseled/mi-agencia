@@ -1,0 +1,115 @@
+/* configuracion general y fuente base */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* color de fondo general */
+body {
+    background-color: #ffffff;
+    color: #222;
+}
+
+/* ----- header y menu de navegacion ----- */
+header {
+    background-color: #2c2c2c;
+    padding: 15px 0;
+}
+
+/* lista del menu centrada con flexbox */
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+/* enlaces del menu */
+.navbar a {
+    color: #f1f1f1;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+/* color para el enlace activo o al pasar el cursor */
+.navbar a:hover,
+.navbar .activo {
+    color: #5b3efc;
+}
+
+/* ----- seccion hero o bloque principal ----- */
+.hero {
+    background-color: #5b3efc; /* color principal de la empresa */
+    color: #fff;
+    text-align: center;
+    padding: 80px 20px;
+    border-radius: 4px;
+}
+
+/* titulo grande en hero */
+.hero h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+/* texto descriptivo */
+.hero p {
+    font-size: 1.1rem;
+}
+
+/* ----- seccion de caracteristicas ----- */
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background-color: #f8f8f8;
+    padding: 40px 20px;
+    flex-wrap: wrap;
+}
+
+/* tarjetas individuales */
+.feature {
+    background-color: #fff;
+    border-radius: 6px;
+    padding: 25px;
+    flex: 1 1 250px;
+    text-align: center;
+    font-weight: 500;
+    border: 1px solid #ddd;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* efecto al pasar el cursor por una tarjeta */
+.feature:hover {
+    transform: scale(1.03);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ----- pie de pagina ----- */
+footer {
+    background-color: #2c2c2c;
+    color: #f1f1f1;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+/* ----- adaptacion para pantallas pequenas ----- */
+@media (max-width: 768px) {
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero h1 {
+        font-size: 1.6rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+}
