@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
-
     <!-- header con menu -->
     <header>
         <nav class="navbar">
@@ -20,28 +19,33 @@
             </ul>
         </nav>
     </header>
-
     <!-- contenido principal -->
     <main>
         <section class="hero">
             <h1>Contacto</h1>
+            <p>Envia un mensaje y te responderemos lo antes posible.</p>
         </section>
 
         <!-- formulario de contacto -->
         <section class="formulario">
             <form action="#" method="post">
-                <input type="text" placeholder="Nombre" required>
-                <input type="email" placeholder="Correo" required>
-                <textarea rows="5" placeholder="Mensaje" required></textarea>
+                <label for="nombre">Nombre</label>
+                <input id="nombre" type="text" placeholder="Tu nombre" required>
+
+                <label for="correo">Correo</label>
+                <input id="correo" type="email" placeholder="Tu correo" required>
+
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" rows="5" placeholder="Escribe tu mensaje..." required></textarea>
+
                 <button type="submit">Enviar</button>
             </form>
         </section>
     </main>
-
     <!-- pie de pagina -->
     <footer>
         <p>© 2025 Codexia Labs Software</p>
     </footer>
-
 </body>
 </html>
+

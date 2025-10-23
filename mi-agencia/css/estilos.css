@@ -113,3 +113,60 @@ footer {
         font-size: 1rem;
     }
 }
+
+/* Formulario de contacto */
+
+/* contenedor del formulario centrado verticalmente */
+.formulario {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+}
+
+/* el formulario en columna y con ancho controlado */
+.formulario form {
+    display: flex;
+    flex-direction: column; /* orden vertical */
+    width: 100%;
+    max-width: 400px;
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* etiquetas del formulario */
+.formulario label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* entradas y area de texto */
+.formulario input,
+.formulario textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+/* boton de enviar */
+.formulario button {
+    background-color: #5b3efc; /* color principal */
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* efecto al pasar el cursor */
+.formulario button:hover {
+    background-color: #432ec0; /* tono mas oscuro */
+}
