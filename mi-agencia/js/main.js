@@ -1,7 +1,7 @@
 // ===== MAIN.JS - OxiAndina =====
 // Funcionalidades principales del sitio web
 
-// Ejecutar cuando el DOM esté completamente cargado
+// Ejecutar cuando el DOM estE completamente cargado
 document.addEventListener('DOMContentLoaded', function() {
     console.log('OxiAndina - Sistema cargado correctamente');
     
@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initSmoothScroll();
 });
 
-// ===== ANIMACIONES AL HACER SCROLL =====
+//ANIMACIONES AL HACER SCROLL
 function initAnimations() {
     const elements = document.querySelectorAll('.feature, .producto-card');
     
@@ -34,7 +34,7 @@ function initAnimations() {
     });
 }
 
-// ===== DESTACAR ENLACE DE NAVEGACIÓN ACTIVO =====
+// DESTACAR ENLACE DE NAVEGACION ACTIVO
 function highlightActiveNavLink() {
     const currentPage = window.location.pathname.split('/').pop() || 'index.html';
     const navLinks = document.querySelectorAll('.navbar a');
@@ -50,7 +50,7 @@ function highlightActiveNavLink() {
     });
 }
 
-// ===== SMOOTH SCROLL PARA ENLACES INTERNOS =====
+//SMOOTH SCROLL PARA ENLACES INTERNOS 
 function initSmoothScroll() {
     const links = document.querySelectorAll('a[href^="#"]');
     
@@ -70,7 +70,7 @@ function initSmoothScroll() {
     });
 }
 
-// ===== FUNCIONES UTILITARIAS =====
+// FUNCIONES UTILITARIAS 
 
 // Mostrar mensaje de éxito o error
 function mostrarMensaje(mensaje, tipo = 'exito') {
