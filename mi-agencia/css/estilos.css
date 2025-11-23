@@ -10,7 +10,7 @@
 :root {
     --color-primary: #0077be; /* Azul profesional (representa oxigeno) */
     --color-secondary: #00a8e8; /* Azul claro */
-    --color-accent: #4CAF50; /* Verde (representa salud/vida) */
+    --color-accent: #4CAF50; 
     --color-dark: #1a1a1a;
     --color-gray: #f4f4f4;
     --color-white: #ffffff;
@@ -186,7 +186,7 @@ header {
     color: var(--color-white);
 }
 
-/* ===== SECCION DE CONTENIDO GENERAL ===== */
+/* SECCION DE CONTENIDO GENERAL */
 .content-section {
     max-width: 1200px;
     margin: 60px auto;
@@ -208,7 +208,7 @@ header {
     text-align: justify;
 }
 
-/* ===== GRID DE PRODUCTOS ===== */
+/* GRID DE PRODUCTOS */
 .productos-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -259,7 +259,7 @@ header {
     font-weight: bold;
 }
 
-/* ===== FORMULARIOS ===== */
+/* FORMULARIOS */
 .formulario-container {
     max-width: 600px;
     margin: 60px auto;
@@ -465,7 +465,7 @@ footer {
     animation: fadeInUp 0.6s ease-out;
 }
 
-/* Efecto de carga para imágenes */
+/* Efecto de carga para imagenes */
 .producto-img,
 .hero-img {
     transition: opacity 0.3s ease;
