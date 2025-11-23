@@ -1,21 +1,15 @@
-// ===== MAIN.JS - OxiAndina =====
+// MAIN.JS - OxiAndina
 // Funcionalidades principales del sitio web
 
-// Ejecutar cuando el DOM estE completamente cargado
 document.addEventListener('DOMContentLoaded', function() {
     console.log('OxiAndina - Sistema cargado correctamente');
     
-    // Inicializar animaciones
     initAnimations();
-    
-    // Inicializar navegacion activa
     highlightActiveNavLink();
-    
-    // Agregar smooth scroll a los enlaces
     initSmoothScroll();
 });
 
-//ANIMACIONES AL HACER SCROLL
+// Animaciones al hacer scroll
 function initAnimations() {
     const elements = document.querySelectorAll('.feature, .producto-card');
     
@@ -34,23 +28,21 @@ function initAnimations() {
     });
 }
 
-// DESTACAR ENLACE DE NAVEGACION ACTIVO
+// Destacar enlace de navegacion activo
 function highlightActiveNavLink() {
     const currentPage = window.location.pathname.split('/').pop() || 'index.html';
     const navLinks = document.querySelectorAll('.navbar a');
     
     navLinks.forEach(link => {
-        // Remover clase activo de todos
         link.classList.remove('activo');
         
-        // Agregar clase activo al enlace correspondiente
         if (link.getAttribute('href') === currentPage) {
             link.classList.add('activo');
         }
     });
 }
 
-//SMOOTH SCROLL PARA ENLACES INTERNOS 
+// Smooth scroll para enlaces internos
 function initSmoothScroll() {
     const links = document.querySelectorAll('a[href^="#"]');
     
@@ -70,19 +62,15 @@ function initSmoothScroll() {
     });
 }
 
-// FUNCIONES UTILITARIAS 
-
-// Mostrar mensaje de éxito o error
+// Mostrar mensaje de exito o error
 function mostrarMensaje(mensaje, tipo = 'exito') {
     const mensajeDiv = document.createElement('div');
     mensajeDiv.className = `mensaje mensaje-${tipo}`;
     mensajeDiv.textContent = mensaje;
     
-    // Insertar al inicio del body o en un contenedor específico
     const container = document.querySelector('.formulario-container') || document.body;
     container.insertBefore(mensajeDiv, container.firstChild);
     
-    // Remover mensaje después de 5 segundos
     setTimeout(() => {
         mensajeDiv.remove();
     }, 5000);
@@ -94,9 +82,8 @@ function validarEmail(email) {
     return regex.test(email);
 }
 
-// Validar teléfono peruano
+// Validar telefono peruano
 function validarTelefono(telefono) {
-    // Acepta formatos: 987654321, +51987654321, 054123456
     const regex = /^(\+51)?[9][0-9]{8}$|^[0-9]{6,9}$/;
     return regex.test(telefono.replace(/\s/g, ''));
 }
