@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,151 @@
     <title>Productos - OxiAndina</title>
     <link rel="stylesheet" href="css/estilos.css">
 </head>
+
 <body>
-    
+    <!-- Header con navegacion --> 
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html" class="logo">OxiAndina</a></li>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="productos.html" class="activo">Productos</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="registro.html">Registro</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero de Productos -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Nuestros Productos</h1>
+            <p>Oxigeno medicinal e industrial de la mas alta calidad certificada</p>
+        </div>
+    </section>
+
+    <!-- Seccion de Filtros -->
+    <section class="content-section">
+        <h2>Catalogo de Productos</h2>
+        <div class="filtros-productos">
+            <button class="btn-categoria activo" data-categoria="todos">Todos</button>
+            <button class="btn-categoria" data-categoria="medicinal">Medicinal</button>
+            <button class="btn-categoria" data-categoria="industrial">Industrial</button>
+            <button class="btn-categoria" data-categoria="equipos">Equipos</button>
+        </div>
+
+        <!-- Grid de Productos - Se carga dinamicamente con JavaScript -->
+        <div class="productos-grid" id="productos-grid">
+            <!-- Los productos se cargan desde productos.js -->
+        </div>
+    </section>
+
+    <!-- Seccion de Informacion Adicional -->
+    <section class="content-section">
+        <h2>Informacion Importante</h2>
+        <div class="features">
+            <div class="feature">
+                <h3>Certificacion de Calidad</h3>
+                <p>Todos nuestros productos cuentan con certificacion DIGEMID y cumplen con la norma tecnica peruana
+                    para oxigeno medicinal. Garantizamos pureza del 99.9%.</p>
+            </div>
+            <div class="feature">
+                <h3>Entrega y Recarga</h3>
+                <p>Ofrecemos servicio de entrega a domicilio en 24-48 horas. Los balones pueden ser recargados en
+                    nuestras plantas o mediante nuestro servicio de recojo y entrega.</p>
+            </div>
+            <div class="feature">
+                <h3>Seguridad</h3>
+                <p>Todos nuestros cilindros son sometidos a pruebas hidrostaticas periodicas y cumplen con las normas
+                    de seguridad para transporte y almacenamiento de gases comprimidos.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seccion de Preguntas Frecuentes -->
+    <section class="content-section">
+        <h2>Preguntas Frecuentes</h2>
+        <div class="nosotros-content">
+            <div class="nosotros-section">
+                <h2>Como elegir el balon adecuado</h2>
+                <p>
+                    La eleccion del balon depende de varios factores como el tiempo de uso diario, la prescripcion
+                    medica
+                    del flujo de oxigeno y la movilidad del paciente. Un balon de 10m3 puede durar entre 50-70 horas con
+                    un flujo de 2 litros por minuto, mientras que un balon de 6m3 duraria aproximadamente 30-40 horas
+                    con
+                    el mismo flujo.
+                </p>
+            </div>
+
+            <div class="nosotros-section">
+                <h2>Mantenimiento y recarga</h2>
+                <p>
+                    Los balones de oxigeno no requieren mantenimiento por parte del usuario. La recarga debe realizarse
+                    cuando el manometro indique presion baja. Ofrecemos servicio de recojo y entrega de balones vacios
+                    para recarga, o puede acercarse directamente a nuestras plantas de produccion.
+                </p>
+            </div>
+
+            <div class="nosotros-section">
+                <h2>Uso seguro del oxigeno</h2>
+                <p>
+                    El oxigeno es un gas comburente que acelera la combustion. Mantenga los balones alejados de fuentes
+                    de calor, llamas abiertas y materiales inflamables. No fume cerca del oxigeno. Almacene los
+                    cilindros
+                    en posicion vertical y en lugares ventilados. Siga siempre las instrucciones de su medico tratante.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>OxiAndina</h3>
+                <p>Empresa lider en produccion y distribucion de oxigeno medicinal e industrial en el Peru,
+                    comprometidos con la salud y bienestar de nuestros clientes.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Enlaces Rapidos</h3>
+                <ul>
+                    <li><a href="nosotros.html">Sobre Nosotros</a></li>
+                    <li><a href="productos.html">Catalogo de Productos</a></li>
+                    <li><a href="servicios.html">Nuestros Servicios</a></li>
+                    <li><a href="contacto.html">Contactanos</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <ul>
+                    <li>Telefono: (054) 123-4567</li>
+                    <li>WhatsApp: +51 987 654 321</li>
+                    <li>Email: info@oxiandina.com</li>
+                    <li>Arequipa, Peru</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 OxiAndina. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/productos.js"></script>
+    <script>
+        // Inicializar productos cuando cargue la pagina
+        document.addEventListener('DOMContentLoaded', function () {
+            // Renderizar todos los productos al cargar
+            window.ProductosOxiAndina.renderizarProductos(window.ProductosOxiAndina.productos);
+
+            // Inicializar filtros
+            window.ProductosOxiAndina.inicializarFiltros();
+        });
+    </script>
 </body>
+
 </html>
