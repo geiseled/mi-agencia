@@ -1,4 +1,4 @@
-// Sistema de gestion de productos OxiAndina mediante una lista
+// Sistema de gestion de productos OxiAndina mediante una lista con 6 objetos iniciales
 
 const productosOxiAndina = [
     {
