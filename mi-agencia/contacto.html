@@ -3,49 +3,306 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto - Codexia Labs Software</title>
+    <meta name="description" content="Contacta con OxiAndina - Atencion 24/7 para oxigeno medicinal">
+    <title>Contacto - OxiAndina</title>
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
-    <!-- header con menu -->
+    <!-- Header con navegacion -->
     <header>
         <nav class="navbar">
             <ul>
+                <li><a href="index.html" class="logo">OxiAndina</a></li>
                 <li><a href="index.html">Inicio</a></li>
-                <li><a href="servicios.html">Servicios</a></li>
-                <li><a href="portafolio.html">Portafolio</a></li>
                 <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
                 <li><a href="contacto.html" class="activo">Contacto</a></li>
+                <li><a href="registro.html">Registro</a></li>
             </ul>
         </nav>
     </header>
-    <!-- contenido principal -->
-    <main>
-        <section class="hero">
-            <h1>Contacto</h1>
-            <p>Envia un mensaje y te responderemos lo antes posible.</p>
-        </section>
 
-        <!-- formulario de contacto -->
-        <section class="formulario">
-            <form action="#" method="post">
-                <label for="nombre">Nombre</label>
-                <input id="nombre" type="text" placeholder="Tu nombre" required>
+    <!-- Hero de Contacto -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Contactanos</h1>
+            <p>Estamos disponibles 24/7 para atender tus necesidades de oxigeno medicinal</p>
+        </div>
+    </section>
 
-                <label for="correo">Correo</label>
-                <input id="correo" type="email" placeholder="Tu correo" required>
+    <!-- Contenedor Principal de Contacto -->
+    <div class="contacto-container">
+        <!-- Informacion de Contacto -->
+        <div class="contacto-info">
+            <h2>Informacion de Contacto</h2>
+            <p style="color: #666; margin-bottom: 30px;">
+                Nuestro equipo esta listo para atenderte. Comunicate con nosotros por cualquiera 
+                de nuestros canales de atencion.
+            </p>
 
-                <label for="mensaje">Mensaje</label>
-                <textarea id="mensaje" rows="5" placeholder="Escribe tu mensaje..." required></textarea>
+            <div class="info-item">
+                <div class="info-icon">T</div>
+                <div class="info-content">
+                    <h3>Telefono Principal</h3>
+                    <p>(054) 123-4567</p>
+                    <p style="font-size: 0.9rem; color: #999;">Lun - Dom: 24 horas</p>
+                </div>
+            </div>
 
-                <button type="submit">Enviar</button>
+            <div class="info-item">
+                <div class="info-icon">W</div>
+                <div class="info-content">
+                    <h3>WhatsApp</h3>
+                    <p>+51 987 654 321</p>
+                    <p style="font-size: 0.9rem; color: #999;">Respuesta inmediata 24/7</p>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <div class="info-icon">E</div>
+                <div class="info-content">
+                    <h3>Email</h3>
+                    <p>info@oxiandina.com</p>
+                    <p style="font-size: 0.9rem; color: #999;">Respuesta en 2-4 horas</p>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <div class="info-icon">U</div>
+                <div class="info-content">
+                    <h3>Ubicacion</h3>
+                    <p>Av. Ejercito 1234, Cercado</p>
+                    <p>Arequipa, Peru</p>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <div class="info-icon">!</div>
+                <div class="info-content">
+                    <h3>Emergencias Medicas</h3>
+                    <p>Linea directa: (054) 999-8888</p>
+                    <p style="font-size: 0.9rem; color: #999;">Disponible 24/7</p>
+                </div>
+            </div>
+
+            <div class="horario-atencion">
+                <h3>Horario de Atencion</h3>
+                <p><strong>Planta Principal:</strong></p>
+                <p>Lunes a Domingo: 24 horas</p>
+                <p style="margin-top: 15px;"><strong>Oficinas Administrativas:</strong></p>
+                <p>Lunes a Viernes: 8:00 AM - 6:00 PM</p>
+                <p>Sabados: 9:00 AM - 1:00 PM</p>
+            </div>
+        </div>
+
+        <!-- Formulario de Contacto -->
+        <div class="formulario-container">
+            <h2>Envianos un Mensaje</h2>
+            <form id="form-contacto" method="POST" action="/api/contacto">
+                <div class="form-group">
+                    <label for="nombre">Nombre Completo *</label>
+                    <input 
+                        type="text" 
+                        id="nombre" 
+                        name="nombre" 
+                        required 
+                        placeholder="Ingresa tu nombre completo"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Correo Electronico *</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        required 
+                        placeholder="tu@email.com"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="telefono">Telefono *</label>
+                    <input 
+                        type="tel" 
+                        id="telefono" 
+                        name="telefono" 
+                        required 
+                        placeholder="987654321"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="asunto">Asunto *</label>
+                    <select id="asunto" name="asunto" required>
+                        <option value="">Selecciona un asunto</option>
+                        <option value="consulta">Consulta General</option>
+                        <option value="cotizacion">Solicitar Cotizacion</option>
+                        <option value="emergencia">Emergencia Medica</option>
+                        <option value="reclamo">Reclamo o Sugerencia</option>
+                        <option value="empresas">Atencion Empresas</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="mensaje">Mensaje *</label>
+                    <textarea 
+                        id="mensaje" 
+                        name="mensaje" 
+                        required 
+                        placeholder="Escribe tu mensaje aqui..."
+                    ></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit">Enviar Mensaje</button>
             </form>
-        </section>
-    </main>
-    <!-- pie de pagina -->
+        </div>
+    </div>
+
+    <!-- Sucursales -->
+    <section class="content-section">
+        <h2>Nuestras Sucursales</h2>
+        <div class="servicios-grid">
+            <div class="servicio-card">
+                <h3>Planta Principal - Arequipa</h3>
+                <p><strong>Direccion:</strong> Av. Ejercito 1234, Cercado, Arequipa</p>
+                <p><strong>Telefono:</strong> (054) 123-4567</p>
+                <p><strong>Horario:</strong> 24 horas, todos los dias</p>
+                <p style="margin-top: 15px;">
+                    Nuestra planta principal cuenta con tecnologia de punta para produccion de oxigeno medicinal 
+                    e industrial. Atencion al publico y empresas.
+                </p>
+            </div>
+
+            <div class="servicio-card">
+                <h3>Sucursal Cayma - Arequipa</h3>
+                <p><strong>Direccion:</strong> Calle Los Pinos 456, Cayma, Arequipa</p>
+                <p><strong>Telefono:</strong> (054) 234-5678</p>
+                <p><strong>Horario:</strong> Lun-Sab 8:00 AM - 8:00 PM</p>
+                <p style="margin-top: 15px;">
+                    Punto de recarga y venta de balones de oxigeno. Servicio rapido sin necesidad de 
+                    trasladarse al centro de la ciudad.
+                </p>
+            </div>
+
+            <div class="servicio-card">
+                <h3>Centro de Distribucion - Cusco</h3>
+                <p><strong>Direccion:</strong> Av. La Cultura 789, Wanchaq, Cusco</p>
+                <p><strong>Telefono:</strong> (084) 345-6789</p>
+                <p><strong>Horario:</strong> Lun-Dom 7:00 AM - 9:00 PM</p>
+                <p style="margin-top: 15px;">
+                    Centro de distribucion para Cusco y provincias cercanas. Entrega a domicilio en 24 horas 
+                    dentro de la ciudad.
+                </p>
+            </div>
+
+            <div class="servicio-card">
+                <h3>Centro de Distribucion - Puno</h3>
+                <p><strong>Direccion:</strong> Jr. Lima 321, Cercado, Puno</p>
+                <p><strong>Telefono:</strong> (051) 456-7890</p>
+                <p><strong>Horario:</strong> Lun-Sab 8:00 AM - 7:00 PM</p>
+                <p style="margin-top: 15px;">
+                    Punto de venta y distribucion para Puno y Juliaca. Servicio especializado para 
+                    zonas de altura.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Preguntas Frecuentes de Contacto -->
+    <section class="content-section">
+        <h2>Preguntas Frecuentes</h2>
+        <div class="features">
+            <div class="feature">
+                <h3>Cuanto demoran en responder?</h3>
+                <p>Respondemos llamadas inmediatamente 24/7. Los mensajes de WhatsApp y email son 
+                respondidos en menos de 2 horas en horario diurno y dentro de 4 horas en horario nocturno.</p>
+            </div>
+            <div class="feature">
+                <h3>Atienden emergencias en la noche?</h3>
+                <p>Si, contamos con personal de guardia las 24 horas del dia, los 7 dias de la semana. 
+                Para emergencias medicas, llama a nuestra linea directa (054) 999-8888.</p>
+            </div>
+            <div class="feature">
+                <h3>Puedo visitar la planta?</h3>
+                <p>Si, puedes visitar nuestra planta principal en horario de oficina (Lun-Vie 8AM-6PM). 
+                Para grupos o visitas guiadas, por favor coordina previamente.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
-        <p>© 2025 Codexia Labs Software</p>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>OxiAndina</h3>
+                <p>Empresa lider en produccion y distribucion de oxigeno medicinal e industrial en el Peru, 
+                comprometidos con la salud y bienestar de nuestros clientes.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Enlaces Rapidos</h3>
+                <ul>
+                    <li><a href="nosotros.html">Sobre Nosotros</a></li>
+                    <li><a href="productos.html">Catalogo de Productos</a></li>
+                    <li><a href="servicios.html">Nuestros Servicios</a></li>
+                    <li><a href="contacto.html">Contactanos</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <ul>
+                    <li>Telefono: (054) 123-4567</li>
+                    <li>WhatsApp: +51 987 654 321</li>
+                    <li>Email: info@oxiandina.com</li>
+                    <li>Arequipa, Peru</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 OxiAndina. Todos los derechos reservados.</p>
+        </div>
     </footer>
+
+    <!-- Scripts JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/validaciones.js"></script>
+    <script>
+        // Validacion del formulario de contacto
+        document.getElementById('form-contacto').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const nombre = document.getElementById('nombre').value;
+            const email = document.getElementById('email').value;
+            const telefono = document.getElementById('telefono').value;
+            const mensaje = document.getElementById('mensaje').value;
+            
+            // Validaciones basicas
+            if (nombre.trim().length < 3) {
+                alert('El nombre debe tener al menos 3 caracteres');
+                return;
+            }
+            
+            if (!window.OxiAndina.validarEmail(email)) {
+                alert('Por favor ingresa un email valido');
+                return;
+            }
+            
+            if (!window.OxiAndina.validarTelefono(telefono)) {
+                alert('Por favor ingresa un telefono valido');
+                return;
+            }
+            
+            if (mensaje.trim().length < 10) {
+                alert('El mensaje debe tener al menos 10 caracteres');
+                return;
+            }
+            
+            // Simulacion de envio
+            alert('Mensaje enviado correctamente! Nos contactaremos contigo pronto.');
+            this.reset();
+        });
+    </script>
 </body>
 </html>
-
