@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Registro de clientes OxiAndina">
+    <title>Registro de Cliente - OxiAndina</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <!-- Header con navegacion -->
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html" class="logo">OxiAndina</a></li>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="registro.html" class="activo">Registro</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero de Registro -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Registro de Cliente</h1>
+            <p>Registrate para acceder a nuestros servicios y beneficios exclusivos</p>
+        </div>
+    </section>
+
+    <!-- Formulario de Registro -->
+    <div class="formulario-container" style="max-width: 700px;">
+        <h2>Crear Cuenta Nueva</h2>
+        
+        <!-- Toggle Tipo de Cliente -->
+        <div class="tipo-cliente-toggle">
+            <button type="button" class="btn-toggle activo" data-tipo="natural" id="btn-natural">
+                Persona Natural
+            </button>
+            <button type="button" class="btn-toggle" data-tipo="empresa" id="btn-empresa">
+                Empresa
+            </button>
+        </div>
+
+        <form id="form-registro" method="POST">
+            <!-- Tipo de cliente (hidden) -->
+            <input type="hidden" id="tipo_cliente" name="tipo_cliente" value="natural">
+
+            <!-- Campos para Persona Natural -->
+            <div id="campos-natural" class="campos-tipo">
+                <div class="form-group">
+                    <label for="nombres">Nombres *</label>
+                    <input 
+                        type="text" 
+                        id="nombres" 
+                        name="nombres" 
+                        placeholder="Ingresa tus nombres"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="apellidos">Apellidos *</label>
+                    <input 
+                        type="text" 
+                        id="apellidos" 
+                        name="apellidos" 
+                        placeholder="Ingresa tus apellidos"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="dni">DNI *</label>
+                    <input 
+                        type="text" 
+                        id="dni" 
+                        name="dni" 
+                        placeholder="12345678"
+                        maxlength="8"
+                    >
+                    <small style="color: #666;">Ingresa tu numero de DNI de 8 digitos</small>
+                </div>
+            </div>
+
+            <!-- Campos para Empresa -->
+            <div id="campos-empresa" class="campos-tipo" style="display: none;">
+                <div class="form-group">
+                    <label for="razon_social">Razon Social *</label>
+                    <input 
+                        type="text" 
+                        id="razon_social" 
+                        name="razon_social" 
+                        placeholder="Nombre de la empresa"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="ruc">RUC *</label>
+                    <input 
+                        type="text" 
+                        id="ruc" 
+                        name="ruc" 
+                        placeholder="20123456789"
+                        maxlength="11"
+                    >
+                    <small style="color: #666;">Ingresa el RUC de 11 digitos</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="representante">Representante Legal *</label>
+                    <input 
+                        type="text" 
+                        id="representante" 
+                        name="representante" 
+                        placeholder="Nombre del representante"
+                    >
+                </div>
+            </div>
+
+            <!-- Campos Comunes -->
+            <div class="form-group">
+                <label for="email_registro">Correo Electronico *</label>
+                <input 
+                    type="email" 
+                    id="email_registro" 
+                    name="email" 
+                    required
+                    placeholder="correo@ejemplo.com"
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="telefono_registro">Telefono/Celular *</label>
+                <input 
+                    type="tel" 
+                    id="telefono_registro" 
+                    name="telefono" 
+                    required
+                    placeholder="987654321"
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="direccion">Direccion *</label>
+                <input 
+                    type="text" 
+                    id="direccion" 
+                    name="direccion" 
+                    required
+                    placeholder="Direccion completa"
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="ciudad">Ciudad *</label>
+                <select id="ciudad" name="ciudad" required>
+                    <option value="">Selecciona una ciudad</option>
+                    <option value="Arequipa">Arequipa</option>
+                    <option value="Cusco">Cusco</option>
+                    <option value="Puno">Puno</option>
+                    <option value="Tacna">Tacna</option>
+                    <option value="Moquegua">Moquegua</option>
+                    <option value="Otra">Otra</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="motivo">Motivo de Registro *</label>
+                <select id="motivo" name="motivo" required>
+                    <option value="">Selecciona un motivo</option>
+                    <option value="uso_personal">Uso Personal/Familiar</option>
+                    <option value="oxigenoterapia">Oxigenoterapia Domiciliaria</option>
+                    <option value="clinica">Clinica/Hospital</option>
+                    <option value="industrial">Uso Industrial</option>
+                    <option value="otro">Otro</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="observaciones">Observaciones</label>
+                <textarea 
+                    id="observaciones" 
+                    name="observaciones" 
+                    placeholder="Informacion adicional (opcional)"
+                    rows="3"
+                ></textarea>
+            </div>
+
+            <div class="form-group" style="margin-top: 30px;">
+                <label style="display: flex; align-items: center; cursor: pointer;">
+                    <input type="checkbox" id="terminos" name="terminos" required style="margin-right: 10px;">
+                    <span>Acepto los terminos y condiciones y la politica de privacidad *</span>
+                </label>
+            </div>
+
+            <button type="submit" class="btn-submit">Registrarse</button>
+        </form>
+
+        <p style="text-align: center; margin-top: 20px; color: #666;">
+            ¿Ya tienes cuenta? <a href="admin.html" style="color: var(--color-primary); font-weight: bold;">Iniciar sesion</a>
+        </p>
+    </div>
+
+    <!-- Beneficios de Registrarse -->
+    <section class="content-section">
+        <h2>Beneficios de Registrarse</h2>
+        <div class="features">
+            <div class="feature">
+                <h3>Atencion Prioritaria</h3>
+                <p>Clientes registrados reciben atencion preferencial en pedidos y entregas urgentes.</p>
+            </div>
+            <div class="feature">
+                <h3>Descuentos Especiales</h3>
+                <p>Acceso a promociones exclusivas y descuentos de hasta 15% en compras frecuentes.</p>
+            </div>
+            <div class="feature">
+                <h3>Historial de Pedidos</h3>
+                <p>Consulta tu historial de compras y recargas desde tu panel de cliente.</p>
+            </div>
+            <div class="feature">
+                <h3>Credito Disponible</h3>
+                <p>Opcion de credito de 30 dias para clientes empresariales con buen historial.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>OxiAndina</h3>
+                <p>Empresa lider en produccion y distribucion de oxigeno medicinal e industrial en el Peru, 
+                comprometidos con la salud y bienestar de nuestros clientes.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Enlaces Rapidos</h3>
+                <ul>
+                    <li><a href="nosotros.html">Sobre Nosotros</a></li>
+                    <li><a href="productos.html">Catalogo de Productos</a></li>
+                    <li><a href="servicios.html">Nuestros Servicios</a></li>
+                    <li><a href="contacto.html">Contactanos</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <ul>
+                    <li>Telefono: (054) 123-4567</li>
+                    <li>WhatsApp: +51 987 654 321</li>
+                    <li>Email: info@oxiandina.com</li>
+                    <li>Arequipa, Peru</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 OxiAndina. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/validaciones.js"></script>
+    <script src="js/registro.js"></script>
+</body>
+</html>
