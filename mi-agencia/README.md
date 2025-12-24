@@ -51,15 +51,16 @@ mi-agencia/
 
 ### Pasos para ejecutar
 1. Clonar el repositorio
-bash
+```bash
 git clone https://github.com/geiseled/mi-agencia.git
 cd mi-agencia
+```
 
 
 2. Iniciar el servidor Python
-bash
+```bash
 python server.py
-
+```
 
 3. Abrir el archivo index.html luego de iniciado el servidor
 

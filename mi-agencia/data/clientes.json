@@ -34,5 +34,23 @@
         "observaciones": "cliente persona",
         "terminos": "on",
         "fecha_registro": "2025-12-24T06:00:39.457Z"
+    },
+    {
+        "id": 1766558260728,
+        "tipo_cliente": "natural",
+        "nombres": "Maria",
+        "apellidos": "Gonzalez",
+        "dni": "88888888",
+        "razon_social": "",
+        "ruc": "",
+        "representante": "",
+        "email": "mariagonzales@gmail.com",
+        "telefono": "678912345",
+        "direccion": "Calle Bolivar 305",
+        "ciudad": "Arequipa",
+        "motivo": "uso_personal",
+        "observaciones": "persona cliente",
+        "terminos": "on",
+        "fecha_registro": "2025-12-24T06:37:40.728Z"
     }
 ]
