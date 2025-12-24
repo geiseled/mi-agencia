@@ -1,1 +1,38 @@
-[]
+[
+    {
+        "id": 1766451188658,
+        "tipo_cliente": "natural",
+        "nombres": "geisel",
+        "apellidos": "pacheco",
+        "dni": "12345678",
+        "razon_social": "",
+        "ruc": "",
+        "representante": "",
+        "email": "gpachecome@unsa.edu.pe",
+        "telefono": "123456789",
+        "direccion": "Calle Arequipa 125 ",
+        "ciudad": "Arequipa",
+        "motivo": "uso_personal",
+        "observaciones": "cliente persona ",
+        "terminos": "on",
+        "fecha_registro": "2025-12-23T00:53:08.657Z"
+    },
+    {
+        "id": 1766451483051,
+        "tipo_cliente": "empresa",
+        "nombres": "",
+        "apellidos": "",
+        "dni": "",
+        "razon_social": "Oxiandina aux",
+        "ruc": "20123456789",
+        "representante": "Milton Cabanillas",
+        "email": "auxiliar@oxiandina.com",
+        "telefono": "123456780",
+        "direccion": "Via Evitamiento S/N",
+        "ciudad": "Arequipa",
+        "motivo": "industrial",
+        "observaciones": "cliente empresa",
+        "terminos": "on",
+        "fecha_registro": "2025-12-23T00:58:03.051Z"
+    }
+]
