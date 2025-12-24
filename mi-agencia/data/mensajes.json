@@ -1,1 +1,11 @@
-[]
+[
+    {
+        "id": 1,
+        "nombre": "pacheco geisel",
+        "email": "geisel@gmail.com",
+        "telefono": "123456789",
+        "asunto": "cotizacion",
+        "mensaje": "cotización para 10 balones de 10m3",
+        "fecha": "2025-12-24T05:53:04.239Z"
+    }
+]

@@ -17,10 +17,6 @@ Ejecuta el siguiente comando:
 
 python server.py
 
-
-Deberas ver un mensaje como este:
-
-
 Servidor WSGI OxiAndina corriendo en http://localhost:8000
 
 Rutas API disponibles:
@@ -37,10 +33,9 @@ Rutas API disponibles:
 ### 3. Abrir el Sitio Web
 Con el servidor corriendo, abre tu navegador y visita:
 
-http://localhost:8000
+http://localhost:8000 para ver las rutas API
 
-
-IMPORTANTE: Por ahora el servidor solo maneja las rutas API. Para ver las paginas HTML, abre directamente los archivos .html en tu navegador o usa:
+Para ver las paginas HTML, abrir directamente los archivos .html en el navegador o usar:
 
 - index.html
 - nosotros.html
@@ -49,7 +44,6 @@ IMPORTANTE: Por ahora el servidor solo maneja las rutas API. Para ver las pagina
 - contacto.html
 - registro.html
 - admin.html
-
 
 ### 4. Probar las Funcionalidades
 

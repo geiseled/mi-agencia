@@ -10,7 +10,7 @@ OxiAndina es una empresa con una pagina web completa para la gestion de ventas y
 - **Control de Versiones:** Git/GitHub
 
 ## Estructura del Proyecto
-
+```t
 mi-agencia/
 ├── index.html          # Página principal
 ├── nosotros.html       # Informacion de la empresa
@@ -45,7 +45,7 @@ mi-agencia/
 ## Instalación y Uso
 
 ### Requisitos
-- Python 3
+- Python 3.17+
 - Navegador web moderno
 - Git
 
@@ -61,9 +61,7 @@ bash
 python server.py
 
 
-3. Abrir en el navegador
-
-http://localhost:8000
+3. Abrir el archivo index.html luego de iniciado el servidor
 
 
 ## Autor
